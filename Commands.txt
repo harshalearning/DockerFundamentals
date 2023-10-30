@@ -1,0 +1,62 @@
+docker 
+docker version  -  Give the information about Installation of Docker.
+docker ps  -  Gives the list of containers that are running.
+docker ps --all  -  Gives the complete list of containers that are run.
+docker build  -  converts file to image
+docker run  -  converts file to containers
+docker push  -  pushes the container to public/private registries
+docker pull  -  pulls the docker image from docker hub to have access for docker daemon.
+docker start [conatinerID/name]  -  Move the container to STARTED state.
+docker pause [conatinerID/name]  -  Move the container to PAUSED state.
+docker unpause [conatinerID/name]  -  Move the conatiner to STARTED state.
+docker stop [conatinerID/name]  -  Move the container to EXITED state.
+docker create [conatinerID/name]  -  Move the container to CREATED state. 
+
+docker run busybox ls   -  Gives the list created by busybox image.
+docker run busybox whoami  -  Gives the name of user.
+docker start -a ID  -  Gives the output for the command used to run that caontainer. as ID is tagged to conatiner.
+docker system prune  -  This removes the image that are created, next time we have to pull the image from docker hub.
+
+docker exec -it 6d233f11358f(this is ID) bash  --  Taking into bash shell inside the container.
+
+Inside container:
+
+ls
+mongo - opens the mongo shell inside the container.
+show dbs  -  lists all the dbs in mongodb.
+ctrl+d  -  brings you back out of container to the root.
+exit - to exit out of shell
+
+docker stop id  -  stops the container and moves it to exited state.
+docker kill id  -  it kills the conatiner at spot, we could use this when the application is about to not respond.
+
+exec commands:
+
+-d, --detach  -  Run command on background.
+-e, --env  -  set environmment variables
+-i,  --interactive  -  Keep STDIN open even if not attached
+--privileged  -  Give extended privileges to the command.
+-t, --tty  -  Allocate pseudo -TTY.(pseudo terminal to read the given things)
+-u, --user  -  Username (format:<name|uid>[:<group|gid>])
+-w, --workdir  -  working directory.
+
+docker exec -it ID bash : Taking into bash shell inside the container.
+docker run -it ID bash : Taking into bash shell inside the container.
+
+
+mkdir <name>  -  mkdir mymongo-image  -  Create a empty folder with the name
+cd mymongo-image
+ls - check if the created folder is present
+code . - I have used VS code to write a docker file and run terminal.
+
+docker build .
+docker run <sha> / docker start <sha>
+
+ctrl+N
+docker ps
+containerid bash / docker exec -it containerid sh
+
+mongo
+showdbs
+
+docker build -t harshakonakalla/harshamongo:v1.0
