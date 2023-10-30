@@ -18,7 +18,7 @@ DOCKER
     -- OS and many more.
 
     Docker is client side application.
-    This is a service and can be deployed on any server.
+    This is a service and can be deployed on any server...
 
 What is Docker?
 
@@ -94,6 +94,6 @@ Docker Image:
 
     ![Alt text](image-7.png)
 
-    
+
 
     
