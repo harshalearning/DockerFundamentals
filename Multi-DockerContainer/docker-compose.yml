@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  harshamongo: 
+    image: "mongo"
+
+  mynode:
+    build: . 
+    ports: 
+      - "8000:8000"
+
+      

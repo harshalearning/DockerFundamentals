@@ -1,0 +1,8 @@
+The goal is to create a simple project with 2 containers, having 2 technologies and merge the containers into 1. So that world can interact and so we could work on them.
+
+In this scenario we don't work with Docker. We will use Docker compose (use .yaml file).
+
+Strategy:
+
+We will create a application with (app(node) + DB(mongo db)). ondifferent containers and wrap them into 1 with docker compose. 
+

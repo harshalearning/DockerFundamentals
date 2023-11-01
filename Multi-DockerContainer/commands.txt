@@ -1,0 +1,27 @@
+Naviage to folder Multi-DockerContainer from terminal.
+mkdir harshaapp
+cd harshaapp
+ls
+node -v : Check node is installed or not
+npm -v : Check if we can run node or not
+
+npm init (creating directory) it basically creates a package.json file.
+LS --> to see package.json
+npm install mongoose --> Instal mangoose, the light weight pavkage.
+
+Now use code . to open up a code editor and create a satrt script to package.json file.
+Then create a index.js file to run the mongoose.
+
+npm start --> run the mongoose
+
+npm build -t harsha/harshaapp .
+
+docker-compose up --build 
+
+
+
+
+
+
+
+

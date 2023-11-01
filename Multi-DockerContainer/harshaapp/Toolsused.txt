@@ -1,0 +1,7 @@
+Base image from node, alpine
+Node applicatoon with MongoDb DB
+Docker
+Docker-compose
+yaml files
+.dockerignore files 
+
