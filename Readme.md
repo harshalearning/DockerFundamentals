@@ -255,7 +255,71 @@ SCENARIO:
     we can run a image with using the command (docker run <sha id>). We could also give a name to docker container, so lets name our image using command (docker build -t username/name:versionno) (docker build -t harshakonakalla/harshamongo:v1.0).
 
 
+========================================================================================================================================----------------------------------------------------------------------------------------------------------------------------------------
 
 
+    How does node application work ?
+
+    There are 3 major components on any node application
+    1) Package.json
+    2)node_modules
+    3) src
+
+    How does these interact with each other ?
+
+    We declare package.json, which are installed into node-modules. src takes the help of node_modules and runs everything.
+
+    Steps to connect to a node application and run it on docker.
+
+    Open terminal --> create a empty folder harshanose
+    mkdir harshanode
+    go to that directory --> cd harshanode then look inside folder with ls
+
+    To check the node instalation and version, we have 2 commands 
+    1) node -v 
+    2) npm -v
+
+
+Multi Stage Buils --> These basically have multiple stages of containers which divides themselfs with run time into one, and dependencies into other to decrease the size of image an denhance security.
+
+Distorless:
+    
+DOCKER NETWORK:
+
+    Basically networking allows containers help to communicate each other and network.
+
+    ![Alt text](image-15.png)
+
+    1) Container 1 taking to Container 2
+    2) Container 1 has isolation with container 2.
+
+1) Container 1 taking to Container 2:
+    We know each of the container and host have different networking subnets for security purposes and to communicate with each other virtual internet is used as a bridge between them. Which is known as Bridge Networking.
+
+    ![Alt text](image-16.png)
+
+    The different types of networking to create a bridge between container and host for the application to be accessible are 
+    1) Bridge Netweoking (where container and host have different IP addresses)
+    2) Host Networking (We want containers very securely, but having both within subnet will be exposed to vulneribilities)
+    3) Overlay Networking ( Important for container orchestirization, when we have multiple host, we will see this with Kubernetes)
+
+
+2) Container 1 has isolation with container 2.
+
+    We can achive isolation between container to have more security between multiple containers, we can use bridge network here too. Docker allows you to create custom bridge networks.
+
+    By default we could create only one bridge network ie Out of the box (OOTD). Using the custom bridge network we can communicate to host from other containers rather than going through the bridge network path created by VETH as docker supports the creation of custom bridge network.
+
+    We can create custom bridge network using docker command --> docker network and we can run the container using command --> 
+    docker run --network.
 
     
+
+
+
+    ![Alt text](image-17.png)
+
+
+
+
+
